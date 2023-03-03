@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import { dummyData } from './utils';
 
 function App() {
-  const [data, setData] = useState(dummyData)
+  const [data, setData] = useState([...Array(6).keys()])
 
   return (
     <div className='container'>
