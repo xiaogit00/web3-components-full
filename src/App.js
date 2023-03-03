@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import { dummyData } from './utils';
 
 function App() {
+  const [data, setData] = useState(dummyData)
+
+  // useEffect(() => {
+  //   fetch("")
+  // })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      {data.map(item => {
+        return (
+          <div className='row'>
+
+            <div className='left'>
+              <div className='logoContainer'>
+                <img className='tokenLogo' src='https://res.cloudinary.com/dl4murstw/image/upload/v1677729872/greybox_zkioqf.png' />
+              </div>
+              <div className='left-info-container'>
+                <div className='tokenName'>Token</div>
+                <div className='tokenBalance'>0.00</div>
+              </div>
+            </div>
+
+            <div className='right'>
+              <div className='tokenValue'>$0</div>
+              <div className='percentageChange'>0%</div>
+            </div>
+          </div>
+        )
+      })}
     </div>
   );
 }

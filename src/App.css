@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  margin: auto;
+  margin-top: 12em;
+  width: 24em;
   display: flex;
   flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid rgb(234, 234, 234);
+  font-family: 'Helvetica Neue', sans-serif, sans-serif;
+}
+
+.row {
+  padding: 16px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logoContainer {
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tokenName {
+  font-weight: 500;
+}
+
+.tokenBalance {
+  color:rgb(112, 112, 112);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.left-info-container {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  padding-left: 8px;
+  justify-content: space-between;
+}
+
+
+.tokenLogo {
+  border-radius: 50%;
+  height: 56px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.tokenValue {
+
+}
+
+.percentageChange {
+
 }
