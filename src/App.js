@@ -5,10 +5,6 @@ import { dummyData } from './utils';
 function App() {
   const [data, setData] = useState(dummyData)
 
-  // useEffect(() => {
-  //   fetch("")
-  // })
-
   return (
     <div className='container'>
       {data.map(item => {
@@ -17,7 +13,7 @@ function App() {
 
             <div className='left'>
               <div className='logoContainer'>
-                <img className='tokenLogo' src='https://res.cloudinary.com/dl4murstw/image/upload/v1677729872/greybox_zkioqf.png' />
+                <img className='tokenLogo' src='https://res.cloudinary.com/dl4murstw/image/upload/v1677729872/greybox_zkioqf.png' alt='tokenlogo'/>
               </div>
               <div className='left-info-container'>
                 <div className='tokenName'>Token</div>
