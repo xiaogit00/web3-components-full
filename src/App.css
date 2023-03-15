@@ -1,6 +1,6 @@
 .container {
   margin: auto;
-  margin-top: 12em;
+  margin-top: 4em;
   width: 24em;
   display: flex;
   flex-direction: column;
@@ -61,4 +61,162 @@
 
 .percentageChange {
 
+}
+
+
+/* Balances */
+
+.headerContainer {
+  position: flex;
+  flex-direction: column;
+  /* margin: auto; */
+  margin-top: 24px;
+  align-items: center;
+  /* border: 1px solid green; */
+  text-align: center;
+}
+
+.debug {
+  border: 1px solid red;
+}
+
+.sectionContainer {
+  border: 1px solid #E2E2E2;
+  width: 90%;
+  border-radius: 8px;
+  margin: 16px;
+  margin-top: 0;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  margin-left: 20px;
+}
+
+/* Transactions */
+
+.actionText {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.rowTxn {
+  padding: 16px;
+  height: 48px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.txnContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.date {
+  font-size: 0.7em;
+  color: #8A8A8A;
+  padding: 2px;
+}
+
+.tokenLogoTransactions {
+  border-radius: 50%;
+  height: 32px;
+}
+
+.action {
+  margin: 4px;
+}
+
+.tokenBundle {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.tokenInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.txnText {
+  font-size: 0.7em;
+  margin: 0;
+  padding: 1px;
+}
+
+.arrow {
+  margin: 2px;
+}
+
+.gasEth {
+  font-size: 0.7em;
+  text-align: end;
+}
+
+.gasQuote {
+  font-size: 0.7em;
+  text-align: end;
+}
+
+.rightTxn {
+  margin-left: 8px;
+}
+
+/* Pools */
+
+.poolTokenLogo {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.poolTokenName {
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.poolTokenBalance {
+  color:rgb(112, 112, 112);
+  font-size: 0.7em;
+}
+
+.pool-left-info-container {
+  display: flex;
+  flex-direction: column;
+  height: 32px;
+  padding-left: 8px;
+  justify-content: space-between;
+}
+
+.apy {
+  font-size: 0.8em;
+}
+
+.tvl {
+  font-size: 0.8em;
+}
+
+.rowHeaders {
+  display: flex;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 0.8em;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between
+}
+
+.rowHeaderPool {
+  width: 92px;
+  
+}
+
+.rowHeaderAPY {
+
+}
+
+.rowHeaderTVL {
+  
 }
