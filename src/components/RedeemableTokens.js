@@ -4,7 +4,7 @@ import '../App.css';
 const RedeemableTokens = ({ address, poolAddress }) => {
     const [tokenData, setTokenData] = useState(null)
     const [loading, setLoading] = useState(false)
-    const apiKey = 'ckey_8bd56439a65d4c44ae6393ae499'
+    const apiKey = process.env.REACT_APP_APIKEY
 
     const redeemableTokenBalanceEndpoint = `https://api.covalenthq.com/v1/cq/covalent/app/curve/tokens/?key=${apiKey}&pool-address=${poolAddress}&address=${address}`
 

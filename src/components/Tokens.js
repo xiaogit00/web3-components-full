@@ -7,7 +7,7 @@ const Tokens = () => {
     const [display, setDisplay] = useState({})
     const [loading, setLoading] = useState(false)
 
-    const apiKey = 'ckey_8bd56439a65d4c44ae6393ae499'
+    const apiKey = process.env.REACT_APP_APIKEY
     const walletAddress = '0x2702811b54ad6F58BAdBEb17007a1303a21Af45F'
     //high balance wallet: 0x4486083589a063ddef47ee2e4467b5236c508fde
     //wide range of balance wallet: 0x2702811b54ad6F58BAdBEb17007a1303a21Af45F
