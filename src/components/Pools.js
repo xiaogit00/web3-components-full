@@ -4,7 +4,6 @@ import '../App.css';
 const Pools = () => {
     const [data, setData] = useState([...Array(3).keys()])
 
-
     return (
         <>
             <h1 className='sectionTitle'>Pools</h1>
