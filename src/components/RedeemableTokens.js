@@ -37,10 +37,10 @@ const RedeemableTokens = ({ address, poolAddress }) => {
 
                             <div className='redeemTokenRow'>
                                 <div className='redeem-left'> 
-                                    <div className='poolTokenName'>{token.contract_name}</div>
-                                    <div className='poolTokenBalance'>{(token.value / (10**token.contract_decimals)).toFixed(5)} {token.contract_ticker_symbol}</div>
+                                    <div className='poolTokenName'>token0</div>
+                                    <div className='poolTokenBalance'>000 USDC</div>
                                 </div>
-                                <div className='redeem-right tvl'> ${token.quote.toFixed(2)} </div>
+                                <div className='redeem-right tvl'> $00 </div>
                             </div>
                             
                         )
