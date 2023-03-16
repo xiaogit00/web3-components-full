@@ -6,7 +6,7 @@ const Tokens = () => {
 
     return (
         <>
-            <h1 className='sectionTitle'>Tokens</h1>
+            <h1 className='sectionTitle'>LP Tokens</h1>
             <div className='sectionContainer'>
                 {data.map(item => {
                     return (
