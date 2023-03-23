@@ -8,7 +8,7 @@ const Tokens = () => {
     const [loading, setLoading] = useState(false)
 
     const apiKey = process.env.REACT_APP_APIKEY
-    const walletAddress = '0x2702811b54ad6F58BAdBEb17007a1303a21Af45F'
+    const walletAddress = '0xc0152cd4c429b7273db278a0355f0dfc9edbe840'
     //high balance wallet: 0x4486083589a063ddef47ee2e4467b5236c508fde
     //wide range of balance wallet: 0x2702811b54ad6F58BAdBEb17007a1303a21Af45F
 
@@ -31,7 +31,7 @@ const Tokens = () => {
             setData(res.data.items)
             setLoading(false)
           })
-      }, [lpTokenBalancesEndpoint])
+      }, [lpTokenBalancesEndpoint, apiKey])
 
     if (loading) {
         return (
