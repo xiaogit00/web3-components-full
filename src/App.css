@@ -96,8 +96,10 @@
 /* Transactions */
 
 .actionText {
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: bold;
+  width: 48px;
+  word-wrap: break-word;
 }
 
 .rowTxn {
