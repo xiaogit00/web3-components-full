@@ -8,7 +8,7 @@ const Tokens = () => {
     const [loading, setLoading] = useState(false)
 
     const apiKey = process.env.REACT_APP_APIKEY
-    const walletAddress = '0x2702811b54ad6F58BAdBEb17007a1303a21Af45F'
+    const walletAddress = '0x4486083589a063ddef47ee2e4467b5236c508fde'
     //high balance wallet: 0x4486083589a063ddef47ee2e4467b5236c508fde
     //wide range of balance wallet: 0x2702811b54ad6F58BAdBEb17007a1303a21Af45F
 
@@ -48,7 +48,7 @@ const Tokens = () => {
                             <div className='row clickable' key={item} onClick={() => toggleDisplay(i)}>
                                 <div className='left'>
                                 <div className='logoContainer'>
-                                    <img className='tokenLogo' src='https://res.cloudinary.com/dl4murstw/image/upload/v1677729872/greybox_zkioqf.png' alt='tokenlogo'/>
+                                    <img className='tokenLogo' src='https://res.cloudinary.com/dl4murstw/image/upload/v1678790049/spaces_-MFA0rQI3SzfbVFgp3Ic_uploads_F5ZS9RzAWKZnNxm9F85H_Curve-Logo-HighRez_zzlvug.webp' alt='tokenlogo'/>
                                 </div>
                                 <div className='left-info-container'>
                                     <div className='tokenName'>{item.contract_name}</div>
