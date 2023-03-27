@@ -31,7 +31,7 @@ const Tokens = () => {
             setData(res.data.items)
             setLoading(false)
           })
-      }, [lpTokenBalancesEndpoint])
+      }, [lpTokenBalancesEndpoint, apiKey])
 
     if (loading) {
         return (
