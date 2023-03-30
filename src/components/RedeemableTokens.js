@@ -16,6 +16,7 @@ const RedeemableTokens = ({ address, poolAddress }) => {
             .then(res => res.json())
             .then(res => {
                 setLoading(false)
+                console.log(res.data.items)
                 setTokenData(res.data.items)
             })
     }, [redeemableTokenBalanceEndpoint])
