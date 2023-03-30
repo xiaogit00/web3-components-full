@@ -6,7 +6,7 @@ const RedeemableTokens = ({ address, poolAddress }) => {
     const [loading, setLoading] = useState(false)
     const apiKey = process.env.REACT_APP_APIKEY
 
-    const redeemableTokenBalanceEndpoint = `https://api.covalenthq.com/v1/cq/covalent/app/curve/tokens/?key=${apiKey}&pool-address=${poolAddress}&address=${address}`
+    const redeemableTokenBalanceEndpoint = `https://api.covalenthq.com/v1/cq/covalent/app/curve/tokens/?pool-address=${poolAddress}&address=${address}`
 
     useEffect(() => {
         setLoading(true)
