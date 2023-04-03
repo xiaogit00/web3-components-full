@@ -41,7 +41,6 @@ const Transactions = () => {
         return (
             <>
                 <h1 className='sectionTitle'>Transactions</h1>
-                {console.log(data)}
                 <div className='sectionContainer'>
                     {data.map(item => {
                         return (

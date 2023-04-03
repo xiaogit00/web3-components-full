@@ -18,6 +18,7 @@
 }
 
 .logoContainer {
+  
 }
 
 .tokenName {
@@ -169,14 +170,33 @@
 
 /* Pools */
 
+.poolSectionContainer {
+  border: 1px solid #E2E2E2;
+  width: 90%;
+  border-radius: 8px;
+  margin: 16px;
+  margin-top: 0;
+  height: 560px;
+  overflow: scroll;
+}
+
+.rowPool {
+  padding: 16px;
+  padding-bottom: 0;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .poolTokenLogo {
   border-radius: 50%;
-  height: 40px;
+  height: 32px;
 }
 
 .poolTokenName {
   font-weight: 500;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .poolTokenBalance {
@@ -184,20 +204,36 @@
   font-size: 0.7em;
 }
 
+.poolAddress {
+  color:rgb(112, 112, 112);
+  font-size: 0.7em;
+  display: flex;
+  text-align: center;
+}
+
+.poolAddressText {
+  padding-left: 4px;
+}
+
 .pool-left-info-container {
   display: flex;
   flex-direction: column;
-  height: 32px;
   padding-left: 8px;
   justify-content: space-between;
+  width: 92px;
+}
+
+.poolType {
+  font-size: 0.7em;
+
 }
 
 .apy {
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .tvl {
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .rowHeaders {
@@ -211,7 +247,7 @@
 }
 
 .rowHeaderPool {
-  width: 92px;
+  width: 128px;
   
 }
 
@@ -220,7 +256,7 @@
 }
 
 .rowHeaderTVL {
-  
+  padding-right: 4px;
 }
 
 /* Row Redeemable Tokens */
@@ -261,4 +297,39 @@
 .loading {
   margin: auto;
   text-align:center;
+}
+
+
+/* Pools */
+
+.scroll {
+  margin-top: 2px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.poolTokenBalanceHeader {
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poolTokenContainer {
+  padding: 8px;
+  border: 1px solid #E2E2E2;
+  margin-left: 32px;
+  margin: 16px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #f9fdfb; */
+  border-radius: 8px;
+
 }
