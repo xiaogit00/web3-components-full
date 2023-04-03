@@ -21,8 +21,8 @@ const Pools = () => {
                                 <img className='poolTokenLogo' src='https://res.cloudinary.com/dl4murstw/image/upload/v1677729872/greybox_zkioqf.png' alt='tokenlogo'/>
                             </div>
                             <div className='pool-left-info-container'>
-                                <div className='poolTokenName'>Pool0</div>
-                                <div className='poolTokenBalance'>token1 token2</div>
+                                <div className='poolTokenName'>token1 / token 2</div>
+                                <div className='poolTokenBalance'>pool address</div>
                             </div>
                         </div>
 
