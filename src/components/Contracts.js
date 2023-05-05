@@ -1,5 +1,7 @@
-const Contracts = ( {spenders} ) => {
-    
+import { ethers } from 'ethers'
+
+const Contracts = ( {spenders, tokenAddress, queryWalletAddress} ) => {
+
     const truncateRegex = /^(0x[a-zA-Z0-9]{4})[a-zA-Z0-9]+([a-zA-Z0-9]{4})$/
 
     const truncateEthAddress = (address) => {
@@ -7,6 +9,35 @@ const Contracts = ( {spenders} ) => {
         if (!match) return address;
         return `${match[1]}…${match[2]}`;
       };
+    
+    const handleRevoke = async (spenderAddress) => {
+        const ethereum = window.ethereum
+        const accounts = await ethereum.request({
+            method: "eth_requestAccounts"
+        })
+        const provider = new ethers.providers.Web3Provider(ethereum)
+        const walletAddress = accounts[0]
+
+        if (walletAddress !== queryWalletAddress.toLowerCase()) {
+            alert(`Sorry, you cannot revoke approval for this wallet address:${queryWalletAddress} as this is not your wallet.`)
+            return
+        }
+        const signer = provider.getSigner(walletAddress)
+
+        const abi = [
+            "function name() public view returns (string)",
+            "function symbol() public view returns (string)",
+            "function decimals() public view returns (uint8)",
+            "function totalSupply() public view returns (uint256)",
+            "function approve(address _spender, uint256 _value) public returns (bool success)"
+        ]
+
+        const tokenContract = new ethers.Contract(tokenAddress, abi, signer)
+
+        await tokenContract.approve(spenderAddress, "0")
+        
+        alert("Successfully revoked approval!")
+    }
 
     return (
         <>
@@ -56,7 +87,7 @@ const Contracts = ( {spenders} ) => {
 
 
                 <div className='revoke'>
-                <button className='revokeButton'>Revoke</button>
+                <button className='revokeButton' onClick={() => handleRevoke(item.spender_address)}>Revoke</button>
                 </div>
             </div>
             )

@@ -2,7 +2,7 @@ import '../App.css'
 import Token from './Token'
 import Contracts from './Contracts'
 
-const TokenAllowance = ( {tokenItem} ) => {
+const TokenAllowance = ( {tokenItem, queryWalletAddress} ) => {
     return (
         <>
             <div className='tokenContainer'>
@@ -13,7 +13,11 @@ const TokenAllowance = ( {tokenItem} ) => {
                 <div>Value at Risk</div>
                 <div>Date approved</div>
             </div>
-            <Contracts spenders={tokenItem.spenders} />
+            <Contracts 
+                spenders={tokenItem.spenders} 
+                tokenAddress={tokenItem.token_address} 
+                queryWalletAddress={queryWalletAddress}
+            />
             </div>
         </>
     )

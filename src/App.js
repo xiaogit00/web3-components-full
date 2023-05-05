@@ -5,7 +5,7 @@ import TokenAllowance from './components/TokenAllowance';
 function App() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
-  const walletAddress = '0x0b17cf48420400e1D71F8231d4a8e43B3566BB5B'
+  const walletAddress = '0xC6dAc003a497A6fC1D948a07913029AAA73E87D7'
   const approvalsEndpoint = `https://api.covalenthq.com/v1/1/approvals/${walletAddress}/`
   const apiKey = process.env.REACT_APP_APIKEY
 
@@ -32,7 +32,7 @@ function App() {
         <div className='title'>Token Approvals</div>
         {data.map(item => {
           return (
-            <TokenAllowance tokenItem={item} />
+            <TokenAllowance tokenItem={item} queryWalletAddress={walletAddress}/>
           )
         })}
       </div>
