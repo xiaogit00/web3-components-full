@@ -1,13 +1,140 @@
-.container {
-  margin: auto;
-  margin-top: 12em;
-  width: 24em;
+.outerContainer {
+  margin-top: 6em;
+}
+
+.tokenContainer {
+  margin: 16px auto;
+  width: 36em;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   border: 1px solid rgb(234, 234, 234);
   font-family: 'Helvetica Neue', sans-serif, sans-serif;
 }
+
+
+.title {
+  margin: auto;
+  padding: 16px;
+  margin-bottom: 32px;
+  font-size: 2em;
+  text-align: center;
+}
+.headers {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7em;
+  margin-left: 3em;
+  margin-right: 9.5em;
+  font-weight: 500;
+}
+
+.width-custom {
+  width: 190px;
+}
+
+.tokenRow {
+  padding: 16px;
+  height: 48px;
+  /* border: 1px solid rgb(235, 235, 235); */
+  border-radius: 12px;
+  margin: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.allowanceRow {
+  padding: 16px;
+  height: 32px;
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 12px;
+  margin: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.risk {
+  width: 8px;
+  padding: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size:0.7em;
+}
+
+.contractName {
+  font-weight: 500;
+  font-size:0.8em;
+  width: 140px;
+}
+
+.addressUrl {
+  text-decoration: none;
+}
+
+.contractAddress {
+  font-size:0.8em;
+  color:rgb(112, 112, 112);
+}
+
+.allowance {
+  font-size: 0.8em;
+}
+
+.valueAtRisk {
+  font-size: 0.8em;
+}
+
+.dateApproved {
+  font-size: 0.8em;
+}
+
+
+.contract {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  padding-left: 8px;
+  justify-content: space-around;
+}
+
+
+.riskLogo {
+  border-radius: 50%;
+  height: 30px;
+}
+
+.valueAmt {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.revokeButton {
+  background-color: white;
+  border-radius:1px;
+  border: 1px;
+  border-color: lightgray;
+  border-style: solid;
+  font-size: 0.7em;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.revokeButton:hover {
+  border-color: deepskyblue;
+  transition: 0.3s;
+}
+
+.revokeButton:active {
+  border-color: blue;
+  transition: 0.3s;
+}
+
+/* Token */
 
 .row {
   padding: 16px;
@@ -17,8 +144,6 @@
   align-items: center;
 }
 
-.logoContainer {
-}
 
 .tokenName {
   font-weight: 500;
@@ -53,12 +178,4 @@
   height: 48px;
   justify-content: space-between;
   align-items: end;
-}
-
-.tokenValue {
-
-}
-
-.percentageChange {
-
 }

@@ -1,34 +1,44 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import TokenAllowance from './components/TokenAllowance';
 
 function App() {
-  const [data, setData] = useState([...Array(6).keys()])
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const walletAddress = '0x0b17cf48420400e1D71F8231d4a8e43B3566BB5B'
+  const approvalsEndpoint = `https://api.covalenthq.com/v1/1/approvals/${walletAddress}/`
+  const apiKey = process.env.REACT_APP_APIKEY
 
-  return (
-    <div className='container'>
-      {data.map(item => {
-        return (
-          <div className='row'>
+  useEffect(() => {
+    setLoading(true)
+    fetch(approvalsEndpoint, {method: 'GET', headers: {
+      "Authorization": `Basic ${btoa(apiKey + ':')}`
+    }})
+      .then(res => res.json())
+      .then(res => {
+        console.log(res.data.items)
+        setData(res.data.items)
+        setLoading(false)
+      })
+  }, [approvalsEndpoint, apiKey])
 
-            <div className='left'>
-              <div className='logoContainer'>
-                <img className='tokenLogo' src='https://res.cloudinary.com/dl4murstw/image/upload/v1677729872/greybox_zkioqf.png' alt='tokenlogo'/>
-              </div>
-              <div className='left-info-container'>
-                <div className='tokenName'>Token</div>
-                <div className='tokenBalance'>0.00</div>
-              </div>
-            </div>
+  if (loading) {
+    return <div>Loading...</div>
+  }
 
-            <div className='right'>
-              <div className='tokenValue'>$0</div>
-              <div className='percentageChange'>0%</div>
-            </div>
-          </div>
-        )
-      })}
-    </div>
-  );
+  if (data) {
+    return (
+      <div className='outerContainer'>
+        <div className='title'>Token Approvals</div>
+        {data.map(item => {
+          return (
+            <TokenAllowance tokenItem={item} />
+          )
+        })}
+      </div>
+    );
+  }
+  
 }
 
 export default App;
