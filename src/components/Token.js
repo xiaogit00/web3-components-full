@@ -1,4 +1,5 @@
 const Token = ( {tokenItem} ) => {
+  
     const percentageAtRisk = tokenItem.balance_quote === 0 || tokenItem.value_at_risk_quote === 0 
                             ? '0' 
                             : (tokenItem.value_at_risk_quote*100/tokenItem.balance_quote).toFixed(2)
