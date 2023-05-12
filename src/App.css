@@ -125,11 +125,3 @@
 .debug {
   border: 1px solid red;
 }
-.right {
-  display: flex;
-  flex-direction: column;
-  height: 48px;
-  justify-content: space-between;
-  align-items: end;
-}
-

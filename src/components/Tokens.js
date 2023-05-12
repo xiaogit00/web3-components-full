@@ -9,8 +9,8 @@ const Tokens = ( {data} ) => {
             {data.map((item, i) => {
                 return(
                     <div className='tokenRow'>
-                        <div><img onError={defaultSrc} className='tokenLogo' src={item.logo} alt={item.name} /></div>
-                        <div className='alignLeft'>{item.name}</div>
+                        <div><img onError={defaultSrc} className='tokenLogo' src={'https://res.cloudinary.com/dl4murstw/image/upload/v1677729872/greybox_zkioqf.png'} alt={'123'} /></div>
+                        <div className='alignLeft'>Token 0</div>
                         <div> {(item.ratio*100).toFixed(2)}% </div>
 
                         {/* Labels */}

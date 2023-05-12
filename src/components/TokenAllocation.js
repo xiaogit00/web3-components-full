@@ -8,26 +8,7 @@ import Diagram from './Diagram'
 const TokenAllocation = ( { walletAddress, selectedChainId} ) => {
 
     const [loading, setLoading] = useState(false)
-    const [data, setData] = useState()
-    const [netWorth, setNetWorth] = useState()
-    const balancesEndpoint = `https://api.covalenthq.com/v1/${selectedChainId}/address/${walletAddress}/balances_v2/`
-
-    const apiKey = process.env.REACT_APP_APIKEY
-    
-    useEffect(() => {
-        setLoading(true)
-        fetch(balancesEndpoint, {method: 'GET', headers: {
-        "Authorization": `Basic ${btoa(apiKey + ':')}`
-        }})
-        .then(res => res.json())
-        .then(res => {
-            const { newData, totalValue } = transformData(res.data.items)
-            // console.log(cleanedData)
-            setData(newData)
-            setNetWorth(totalValue)
-            setLoading(false)
-        })
-    }, [balancesEndpoint, apiKey])
+    const [data, setData] = useState([...Array(5).keys()])
 
     if (loading) {
         return (
@@ -48,7 +29,7 @@ const TokenAllocation = ( { walletAddress, selectedChainId} ) => {
                 </div>
                 <div className='networthContainer'>
                     <div> Net worth </div>
-                    <div className='tokenTitle'>${netWorth.toFixed(2)}</div>
+                    <div className='tokenTitle'>$000</div>
                 </div>
                 
                 
