@@ -1,12 +1,78 @@
+/* App.js */
 .container {
   margin: auto;
-  margin-top: 12em;
-  width: 24em;
+  margin-top: 8em;
+  padding: 16px;
+  width: 480px;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   border: 1px solid rgb(234, 234, 234);
   font-family: 'Helvetica Neue', sans-serif, sans-serif;
+}
+
+.title {
+  font-size: 2em;
+  margin: 16px;
+}
+
+/* ChainSelector */
+.buttonsContainer {
+  display: flex;
+  margin: 16px;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 8px;
+}
+
+.ant-btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* TokenAllocation */
+.tokenAllocationContainer {
+  padding-top: 32px;
+  margin: 16px;
+}
+.tokenTitle {
+  font-size: 1.5em;
+}
+.flex {
+  display: flex;
+}
+
+.networthContainer {
+  display: flex;
+  margin: 32px;
+  flex-direction: column;
+}
+
+/* Tokens */
+.tokenContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tokenRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px;
+  margin-left: 32px;
+  margin-right: 16px;
+  align-items: center;
+}
+
+.alignLeft {
+  margin-right: auto;
+  padding-left: 16px;
+}
+
+.spinner {
+  text-align: center;
+  margin-top: 64px;
 }
 
 .row {
@@ -15,9 +81,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logoContainer {
 }
 
 .tokenName {
@@ -44,9 +107,24 @@
 
 .tokenLogo {
   border-radius: 50%;
-  height: 56px;
+  height: 25px;
 }
 
+.tokenLogo::before {
+  border-radius: 50%;
+  height: 25px;
+  background-color: antiquewhite;
+}
+
+.tokenLogo::after {
+  border-radius: 50%;
+  height: 25px;
+  background-color: antiquewhite;
+}
+
+.debug {
+  border: 1px solid red;
+}
 .right {
   display: flex;
   flex-direction: column;
@@ -55,10 +133,3 @@
   align-items: end;
 }
 
-.tokenValue {
-
-}
-
-.percentageChange {
-
-}

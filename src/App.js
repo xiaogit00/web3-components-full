@@ -1,34 +1,44 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import TokenAllocation from './components/TokenAllocation';
+import ChainSelector from './components/ChainSelector';
 
 function App() {
-  const [data, setData] = useState([...Array(6).keys()])
+  const [chains, setChains] = useState()
+  const [selectedChainId, setSelectedChainId] = useState(1)
 
-  return (
-    <div className='container'>
-      {data.map(item => {
-        return (
-          <div className='row'>
+  const walletAddress = '0x0b17cf48420400e1D71F8231d4a8e43B3566BB5B'
+  const walletActivityEndpoint = `https://api.covalenthq.com/v1/labs/activity/${walletAddress}/`
+  const apiKey = process.env.REACT_APP_APIKEY
 
-            <div className='left'>
-              <div className='logoContainer'>
-                <img className='tokenLogo' src='https://res.cloudinary.com/dl4murstw/image/upload/v1677729872/greybox_zkioqf.png' alt='tokenlogo'/>
-              </div>
-              <div className='left-info-container'>
-                <div className='tokenName'>Token</div>
-                <div className='tokenBalance'>0.00</div>
-              </div>
-            </div>
+  const handleChainSelect = (chainId) => {
+    setSelectedChainId(chainId)
+  }
 
-            <div className='right'>
-              <div className='tokenValue'>$0</div>
-              <div className='percentageChange'>0%</div>
-            </div>
-          </div>
-        )
-      })}
-    </div>
-  );
+  useEffect(() => {
+    fetch(walletActivityEndpoint, {method: 'GET', headers: {
+      "Authorization": `Basic ${btoa(apiKey + ':')}`
+    }})
+      .then(res => res.json())
+      .then(res => {
+        const excludeTestnet = res.data.items.filter(item => item.is_testnet === false)
+        setChains(excludeTestnet)
+      })
+  }, [walletActivityEndpoint, apiKey])
+
+  
+
+  if (chains) {
+    return (
+      <>
+        <div className='container'>
+          <div className='title'>Dashboard</div>
+          <ChainSelector chains={chains} handleChainSelect={handleChainSelect}/>
+          <TokenAllocation selectedChainId={selectedChainId} walletAddress={walletAddress}/>
+        </div>
+      </>
+    );
+  }
 }
 
 export default App;
