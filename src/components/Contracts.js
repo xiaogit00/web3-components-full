@@ -78,7 +78,7 @@ const Contracts = ( {spenders, tokenAddress, queryWalletAddress} ) => {
                 </div>
 
                 <div className='valueAtRisk'>
-                ${item.value_at_risk_quote.toFixed(2)}
+                {item.pretty_value_at_risk_quote}
                 </div>
 
                 <div className='dateApproved'>
