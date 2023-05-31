@@ -16,6 +16,73 @@
   margin: 16px;
 }
 
+/* Wallet Summary */
+.walletSummaryContainer {
+  display: flex;
+  margin: 16px;
+}
+
+.userProfile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profilePic {
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: 4px;
+  background: 1px solid rgb(236, 236, 236);
+}
+
+.address {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 0.8em;
+  color:rgb(116, 116, 116);
+}
+.txnSummaryContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  margin-left: 64px;
+  gap: 4px;
+}
+
+.textElem {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+}
+
+.txnCount {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+.buttonsRow {
+  display: flex;
+  gap: 8px;
+}
+
+.buttons {
+  font-size: 0.6em;
+  border: 1px solid black;
+  padding: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buttons:hover {
+  border: 1px solid grey;
+  background-color: antiquewhite;
+}
+
+.buttons:active {
+  border: 1px solid grey;
+  background-color: rgb(255, 222, 179);
+}
+
 /* ChainSelector */
 .buttonsContainer {
   display: flex;

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import TokenAllocation from './components/TokenAllocation';
 import ChainSelector from './components/ChainSelector';
+import WalletSummary from './components/WalletSummary';
 
 function App() {
   const [chains, setChains] = useState()
@@ -32,7 +33,7 @@ function App() {
     return (
       <>
         <div className='container'>
-          <div className='title'>Dashboard</div>
+          <WalletSummary />
           <ChainSelector chains={chains} handleChainSelect={handleChainSelect}/>
           <TokenAllocation selectedChainId={selectedChainId} walletAddress={walletAddress}/>
         </div>
