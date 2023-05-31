@@ -12,7 +12,7 @@ Run the following commands to see what the component look like:
 
 `npm i`
 
-`git checkout part6-multichain-portfolio-end`
+`git checkout part7-multichain-wallet-activity`
 
 `npm start`
 
