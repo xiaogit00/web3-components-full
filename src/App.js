@@ -33,7 +33,7 @@ function App() {
     return (
       <>
         <div className='container'>
-          <WalletSummary />
+          <WalletSummary walletAddress={walletAddress} chainId={selectedChainId} chains={chains}/>
           <ChainSelector chains={chains} handleChainSelect={handleChainSelect}/>
           <TokenAllocation selectedChainId={selectedChainId} walletAddress={walletAddress}/>
         </div>
