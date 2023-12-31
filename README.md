@@ -10,3 +10,6 @@ To see them for yourself:
 Simply switch to different branches to check out the different web3 components!
 
 ![Web3 Components](https://res.cloudinary.com/dl4murstw/image/upload/v1704010567/webcomponent3_v4fcva.png)
+
+To check out the accompanying tutorial series, see:  
+[Web3 Component Guides](https://www.covalenthq.com/docs/unified-api/guides/building-block-explorers-part-1-multi-chain-block-transaction-explorer/)
