@@ -2,10 +2,10 @@
 
 To see them for yourself: 
 
-`git clone https://github.com/xiaogit00/building-wallets.git`
-`cd building-wallets`
-`npm i`
-`npm start`
+`git clone https://github.com/xiaogit00/building-wallets.git`  
+`cd building-wallets`  
+`npm i`  
+`npm start`  
 
 Simply switch to different branches to check out the different web3 components!
 
